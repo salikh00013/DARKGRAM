@@ -104,7 +104,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteGrayText6] = 0xff757575;
         defaultColors[key_windowBackgroundWhiteGrayText7] = 0xffc6c6c6;
         defaultColors[key_windowBackgroundWhiteGrayText8] = 0xff6d6d72;
-        defaultColors[key_windowBackgroundWhiteBlackText] = DEFAULT_BLACK_TEXT;
+        defaultColors[key_windowBackgroundWhiteBlackText] = 0xffEAEAEA;
         defaultColors[key_windowBackgroundWhiteHintText] = 0xffa8a8a8;
         defaultColors[key_windowBackgroundWhiteValueText] = TELEGRAM_COLOR_TEXT;
         defaultColors[key_windowBackgroundWhiteLinkText] = TELEGRAM_COLOR_TEXT;
