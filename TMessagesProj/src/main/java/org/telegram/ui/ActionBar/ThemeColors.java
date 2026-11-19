@@ -76,7 +76,7 @@ public class ThemeColors {
         defaultColors[key_share_linkText] = 0xFF222222;
         defaultColors[key_share_linkBackground] = 0x0F000000;
 
-        defaultColors[key_windowBackgroundWhite] = 0xffffffff;
+        defaultColors[key_windowBackgroundWhite] = 0xff121212;
         defaultColors[key_windowBackgroundUnchecked] = 0xff96A2AD;
         defaultColors[key_windowBackgroundChecked] = 0xff229AF0;
         defaultColors[key_windowBackgroundCheckText] = 0xffffffff;
