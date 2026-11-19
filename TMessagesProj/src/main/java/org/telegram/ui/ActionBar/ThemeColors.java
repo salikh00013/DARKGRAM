@@ -96,7 +96,7 @@ public class ThemeColors {
         defaultColors[key_text_RedRegular] = 0xffcc2929;
         defaultColors[key_text_RedBold] = 0xffcc4747;
         defaultColors[key_fill_RedNormal] = 0xffeb5e5e;
-        defaultColors[key_windowBackgroundWhiteGrayText] = 0xff808384;
+        defaultColors[key_windowBackgroundWhiteGrayText] = 0xffB0B0B0;
         defaultColors[key_windowBackgroundWhiteGrayText2] = 0xff82868a;
         defaultColors[key_windowBackgroundWhiteGrayText3] = 0xff999999;
         defaultColors[key_windowBackgroundWhiteGrayText4] = 0xff808080;
