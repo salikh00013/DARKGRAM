@@ -3233,6 +3233,9 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                         fillNextCodeParams(params, (TLRPC.auth_SentCode) response);
                     }
                 } else {
+                    if (error.text == null || error.code == -1000) {
+                        needShowAlert(getString(R.string.RestorePasswordNoEmailTitle), "DARKGRAM login request failed (code " + error.code + "): " + (error.text == null ? "No error details from server" : error.text));
+                    }
                     if (error.text != null) {
                         if (error.text.contains("SESSION_PASSWORD_NEEDED")) {
                             TL_account.getPassword req2 = new TL_account.getPassword();
