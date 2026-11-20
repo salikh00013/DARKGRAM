@@ -76,13 +76,13 @@ public class ThemeColors {
         defaultColors[key_share_linkText] = 0xFF222222;
         defaultColors[key_share_linkBackground] = 0x0F000000;
 
-        [key_windowBackgroundWhite] = 0xff121212;
+        defaultColors[key_windowBackgroundWhite] = 0xff121212;
         defaultColors[key_windowBackgroundUnchecked] = 0xff96A2AD;
         defaultColors[key_windowBackgroundChecked] = 0xff229AF0;
         defaultColors[key_windowBackgroundCheckText] = 0xffffffff;
         defaultColors[key_progressCircle] = 0xff1c93e3;
         defaultColors[key_windowBackgroundWhiteGrayIcon] = 0xffE0E0E0;
-        defaultColors[key_windowBackgroundWhiteBludefaultColorseText] = 0xff4092cd;
+        defaultColors[key_windowBackgroundWhiteBlueText] = 0xff4092cd;
         defaultColors[key_windowBackgroundWhiteBlueText2] = 0xff3a95d5;
         defaultColors[key_windowBackgroundWhiteBlueText3] = 0xff2678b6;
         defaultColors[key_windowBackgroundWhiteBlueText4] = 0xff1c93e3;
@@ -102,7 +102,7 @@ public class ThemeColors {
         defaultColors[key_windowBackgroundWhiteGrayText4] = 0xff808080;
         defaultColors[key_windowBackgroundWhiteGrayText5] = 0xffa3a3a3;
         defaultColors[key_windowBackgroundWhiteGrayText6] = 0xff757575;
-        dedefaultColorsfaultColors[key_windowBackgroundWhiteGrayText7] = 0xffc6c6c6;
+        defaultColors[key_windowBackgroundWhiteGrayText7] = 0xffc6c6c6;
         defaultColors[key_windowBackgroundWhiteGrayText8] = 0xff6d6d72;
         defaultColors[key_windowBackgroundWhiteBlackText] = 0xffEAEAEA;
         defaultColors[key_windowBackgroundWhiteHintText] = 0xffa8a8a8;
