@@ -95,6 +95,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
     public ArrayList<TL_account.Passkey> currentPasskeys;
 
     private int privacySectionRow;
+    private int antiDeleteRow;
     @Keep
     private int blockedRow;
     @Keep
@@ -507,6 +508,12 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                 }
             } else if (position == passcodeRow) {
                 presentFragment(PasscodeActivity.determineOpenFragment());
+            } else if (position == antiDeleteRow) {
+                boolean enabled = MessagesController.getGlobalMainSettings().getBoolean("antiDelete", false);
+                MessagesController.getGlobalMainSettings().edit().putBoolean("antiDelete", !enabled).apply();
+                if (view instanceof TextCheckCell) {
+                    ((TextCheckCell) view).setChecked(!enabled);
+                }
             } else if (position == secretWebpageRow) {
                 if (getMessagesController().secretWebpagePreview == 1) {
                     getMessagesController().secretWebpagePreview = 0;
@@ -767,6 +774,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
         bioRow = rowCount++;
         musicRow = rowCount++;
         groupsRow = rowCount++;
+        antiDeleteRow = rowCount++;
         privacyShadowRow = rowCount++;
 
         if (getMessagesController().autoarchiveAvailable || getUserConfig().isPremium()) {
@@ -1298,6 +1306,8 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                         textCheckCell.setTextAndCheck(getString("SyncContacts", R.string.SyncContacts), newSync, true);
                     } else if (position == contactsSuggestRow) {
                         textCheckCell.setTextAndCheck(getString("SuggestContacts", R.string.SuggestContacts), newSuggest, false);
+                    } else if (position == antiDeleteRow) {
+                        textCheckCell.setTextAndCheck("Anti-Delete", MessagesController.getGlobalMainSettings().getBoolean("antiDelete", false), false);
                     } else if (position == newChatsRow) {
                         textCheckCell.setTextAndCheck(getString("ArchiveAndMute", R.string.ArchiveAndMute), archiveChats, false);
                     }
@@ -1413,7 +1423,7 @@ public class PrivacySettingsActivity extends BaseFragment implements Notificatio
                 return 1;
             } else if (position == securitySectionRow || position == advancedSectionRow || position == privacySectionRow || position == secretSectionRow || position == botsSectionRow || position == contactsSectionRow || position == newChatsHeaderRow) {
                 return 2;
-            } else if (position == secretWebpageRow || position == contactsSyncRow || position == contactsSuggestRow || position == newChatsRow) {
+            } else if (position == secretWebpageRow || position == contactsSyncRow || position == contactsSuggestRow || position == newChatsRow || position == antiDeleteRow) {
                 return 3;
             } else if (position == botsAndWebsitesShadowRow) {
                 return 4;
